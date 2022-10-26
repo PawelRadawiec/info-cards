@@ -1,0 +1,25 @@
+<div class="card">
+  <div
+    class="card__header"
+    [ngStyle]="{
+      'background-image':
+        'linear-gradient(-225deg, rgba(255, 243, 191,0.1) 0%, rgba(255, 243, 189,0.2) 10%) ,url(/img/' +
+        card.image +
+        ')'
+    }"
+  ></div>
+
+  <div class="card__price">
+    <p>{{ card.price }} &dollar;</p>
+  </div>
+
+  <div class="card__content">
+    <h2 class="card__subtitle">{{ card.subtitle }}</h2>
+
+    <ul class="card__items">
+      <li class="card__item" *ngFor="let item of card?.items">
+        <p>{{ item.description }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
