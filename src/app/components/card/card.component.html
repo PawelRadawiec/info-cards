@@ -22,4 +22,10 @@
       </li>
     </ul>
   </div>
+  <app-btn
+    class="card__btn"
+    [text]="'Choose'"
+    [loading]="card.loading"
+    (onClick)="selectVariant(card)"
+  ></app-btn>
 </div>

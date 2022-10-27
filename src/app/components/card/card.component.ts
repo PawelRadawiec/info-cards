@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Card } from '../cards/cards.component';
 
 @Component({
@@ -6,10 +6,13 @@ import { Card } from '../cards/cards.component';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() card: Card;
+  @Output() onClick = new EventEmitter<Card>();
 
   constructor() {}
 
-  ngOnInit(): void {}
+  selectVariant(card: Card) {
+    this.onClick.next(card);
+  }
 }

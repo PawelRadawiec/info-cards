@@ -66,4 +66,9 @@
     padding: 1rem;
     border-bottom: 2px solid var(--color-primary-dark-3);
   }
+
+  &__btn {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
 }

@@ -1,0 +1,6 @@
+<button class="btn" (click)="click()">
+  <div class="btn__content">
+    <div *ngIf="loading" class="btn__loader"></div>
+    <p *ngIf="!loading" class="btn__text">{{ text }}</p>
+  </div>
+</button>
