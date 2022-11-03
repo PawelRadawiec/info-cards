@@ -1,5 +1,9 @@
 <div class="cards">
-  <ng-container *ngFor="let card of cards">
-    <app-card [card]="card" (onClick)="selectCard($event)"></app-card>
-  </ng-container>
+  <app-card
+    *ngFor="let card of cards"
+    [card]="card"
+    (onClick)="selectCard($event)"
+  ></app-card>
 </div>
+
+<app-details [card]="selectedCard"></app-details>
