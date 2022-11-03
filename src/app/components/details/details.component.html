@@ -1,9 +1,32 @@
 <div class="details" *ngIf="card">
-  <div [className]="'details__pointer details__pointer--' + card.id">
-    <p>&UpArrow;</p>
+  <h2 class="details__header">{{ card.title }}</h2>
+
+  <div class="details__price">
+    <h3 class="details__header--small">Price</h3>
+    <ul>
+      <li>Basic - 255 &dollar;</li>
+      <li>Medmium - 520 &dollar;</li>
+      <li>Exclusive - 520 &dollar;</li>
+    </ul>
   </div>
-  <h3 class="details__header">Header details</h3>
-  <div class="details__price">Details price</div>
-  <div class="details__attractions">Details attractions</div>
-  <div class="details__duration">Details duration</div>
+  <div class="details__attractions">
+    <h3 class="details__header--small">Attractions</h3>
+    <ul>
+      <li>Entertainment parks</li>
+      <li>Wildlife attractions</li>
+      <li>Museums and art galleries</li>
+      <li>Unique built attractions</li>
+      <li>Historical or heritage attractions</li>
+    </ul>
+  </div>
+  <div class="details__duration">
+    <h3 class="details__header--small">Duration</h3>
+    <ul>
+      <li>One day</li>
+      <li>Two days</li>
+      <li>Three days</li>
+      <li>Four days</li>
+      <li>Five days</li>
+    </ul>
+  </div>
 </div>
