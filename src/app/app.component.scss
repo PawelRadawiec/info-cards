@@ -1,5 +1,11 @@
-.container {
-  max-width: 1200px;
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
-  margin: auto;
+
+  &__content {
+    min-width: 1200px;
+    margin: auto;
+  }
 }

@@ -1,4 +1,4 @@
-<div class="cards">
+<div class="cards" *ngIf="cardData.cards$ | async as cards">
   <app-card
     *ngFor="let card of cards"
     [card]="card"
@@ -6,4 +6,4 @@
   ></app-card>
 </div>
 
-<app-details [card]="selectedCard"></app-details>
+<app-details [card]="cardData.selectedCard$ | async"></app-details>

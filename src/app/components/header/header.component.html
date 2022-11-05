@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header__left">
+    <svg class="header__icon">
+      <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-network"></use>
+    </svg>
+
+    <p class="header__text">Places</p>
+  </div>
+
+  <div class="header__rigth">
+    <div class="dropdown">
+      <svg
+        class="dropdown__icon"
+        [class.dropdown__icon--selected]="selected"
+        (click)="selectDropdown()"
+      >
+        <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-menu"></use>
+      </svg>
+      <div class="dropdown__list" [class.dropdown__list--display]="selected">
+        <ul>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Login</li>
+        </ul>
+      </div>
+      `
+    </div>
+  </div>
+</header>
