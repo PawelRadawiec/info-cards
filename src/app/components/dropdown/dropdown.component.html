@@ -1,0 +1,17 @@
+<div #dropdown class="dropdown" (click)="selectDropdown()">
+  <svg
+    #dropdownIcon
+    class="dropdown__icon"
+    [class.dropdown__icon--selected]="selected"
+  >
+    <use
+      #dropdownIconUse
+      xlink:href="../../../assets/svg/symbol-defs.svg#icon-menu"
+    ></use>
+  </svg>
+  <div class="dropdown__list" [class.dropdown__list--display]="selected">
+    <ul>
+      <li *ngFor="let option of options">{{ option.description }}</li>
+    </ul>
+  </div>
+</div>
