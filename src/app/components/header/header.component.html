@@ -1,13 +1,50 @@
 <header class="header">
-  <div class="header__left">
+  <div class="header__left"></div>
+
+  <div class="header__logo">
     <svg class="header__icon">
       <use xlink:href="../../../assets/svg/symbol-defs.svg#icon-network"></use>
     </svg>
-
     <p class="header__text">Places</p>
   </div>
 
+  <app-dropdown class="header__dropdown" [options]="options"></app-dropdown>
+
+  <p class="header__description">Best place to plan vacatoin</p>
+
   <div class="header__rigth">
-    <app-dropdown [options]="options"></app-dropdown>
+    <p class="header__rigth__header">Top 3 places</p>
+    <ul class="header__rigth__list">
+      <li class="header__rigth__item">
+        <div class="header__rigth__img">
+          <img
+            class="header__rigth__img"
+            src="../../../assets/img/lizbona.jpg"
+            alt=""
+          />
+        </div>
+        <p>Lizbona</p>
+      </li>
+      <li class="header__rigth__item">
+        <div>
+          <img
+            class="header__rigth__img"
+            src="../../../assets/img/statue.jpg"
+            alt=""
+          />
+        </div>
+        <p>New York</p>
+      </li>
+      <li class="header__rigth__item">
+        <div>
+          <img
+            class="header__rigth__img"
+            src="../../../assets/img/colloseum.jpg"
+            alt=""
+          />
+        </div>
+        <p>Rome</p>
+      </li>
+    </ul>
   </div>
 </header>
