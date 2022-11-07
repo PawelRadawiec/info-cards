@@ -10,6 +10,20 @@ export interface Card {
   items: CardItem[];
   price: number;
   selected: boolean;
+  details: CardDetails;
+}
+
+export interface CardDetails {
+  price: CardDetailsItem[];
+  attractions: CardDetailsItem[];
+  duration: CardDetailsItem[];
+}
+
+export interface CardDetailsItem {
+  type: string;
+  price: number;
+  description: string;
+  selected: boolean;
 }
 
 export interface CardItem {
@@ -31,5 +45,9 @@ export class CardsComponent implements OnInit {
 
   selectCard(card: Card) {
     this.cardData.selectCard(card);
+  }
+
+  selectItem(data: [Card, CardDetailsItem]) {
+    this.cardData.selectCardItem(data);
   }
 }

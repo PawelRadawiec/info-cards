@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../cards/cards.component';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Card, CardDetailsItem } from '../cards/cards.component';
 
 @Component({
   selector: 'app-details',
@@ -8,8 +8,13 @@ import { Card } from '../cards/cards.component';
 })
 export class DetailsComponent implements OnInit {
   @Input() card: Card;
+  @Output() cardItemClick = new EventEmitter<[Card, CardDetailsItem]>();
 
   constructor() {}
 
   ngOnInit() {}
+
+  selectCardItem(card: Card, cardItem: CardDetailsItem) {
+    this.cardItemClick.next([card, cardItem]);
+  }
 }

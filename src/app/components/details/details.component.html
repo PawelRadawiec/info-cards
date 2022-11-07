@@ -2,31 +2,42 @@
   <h2 class="details__header">{{ card.title }}</h2>
 
   <div class="details__price">
-    <h3 class="details__header--small">Price</h3>
+    <h3 class="details__header--small">Type</h3>
     <ul>
-      <li>Basic - 255 &dollar;</li>
-      <li>Medmium - 520 &dollar;</li>
-      <li>Exclusive - 520 &dollar;</li>
+      <li
+        class="details__item"
+        [class.details__item--selected]="item.selected"
+        (click)="selectCardItem(card, item)"
+        *ngFor="let item of card.details.price"
+      >
+        {{ item.description }} - {{ item.price }} &dollar;
+      </li>
     </ul>
   </div>
   <div class="details__attractions">
     <h3 class="details__header--small">Attractions</h3>
     <ul>
-      <li>Entertainment parks</li>
-      <li>Wildlife attractions</li>
-      <li>Museums and art galleries</li>
-      <li>Unique built attractions</li>
-      <li>Historical or heritage attractions</li>
+      <li
+        class="details__item"
+        [class.details__item--selected]="item.selected"
+        (click)="selectCardItem(card, item)"
+        *ngFor="let item of card.details.attractions"
+      >
+        {{ item.description }}
+      </li>
     </ul>
   </div>
   <div class="details__duration">
     <h3 class="details__header--small">Duration</h3>
     <ul>
-      <li>One day</li>
-      <li>Two days</li>
-      <li>Three days</li>
-      <li>Four days</li>
-      <li>Five days</li>
+      <li
+        class="details__item"
+        [class.details__item--selected]="item.selected"
+        (click)="selectCardItem(card, item)"
+        *ngFor="let item of card.details.duration"
+      >
+        {{ item.description }}
+      </li>
     </ul>
   </div>
 </div>

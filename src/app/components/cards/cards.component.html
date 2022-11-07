@@ -6,4 +6,7 @@
   ></app-card>
 </div>
 
-<app-details [card]="cardData.selectedCard$ | async"></app-details>
+<app-details
+  [card]="cardData.selectedCard$ | async"
+  (cardItemClick)="selectItem($event)"
+></app-details>
